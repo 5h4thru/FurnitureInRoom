@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'com.google.ar.sceneform.plugin'
 }
 
 android {
@@ -9,6 +10,7 @@ android {
 
     defaultConfig {
         applicationId "sai47.random.tutorials.ar"
+        // Sceneform and ARCore requires minSdkVersion >= 24.
         minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
@@ -42,4 +44,15 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // ARCore
+    implementation 'com.google.ar:core:1.25.0'
+
+    // Provides ArFragment, and other UX resources.
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
+
+    // Alternatively, use ArSceneView without the UX dependency.
+    implementation 'com.google.ar.sceneform:core:1.15.0'
+
+    implementation 'com.google.ar.sceneform:animation:1.15.0'
 }
