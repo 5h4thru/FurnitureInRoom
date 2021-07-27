@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "sai47.random.tutorials.ar"
-        minSdkVersion 28
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
